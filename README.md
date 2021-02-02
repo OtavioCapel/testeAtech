@@ -1,27 +1,25 @@
-# TestAtech
+### Features
+#Teste Atech
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+*Sistema desenvolvido como teste para empresa Atech* .
 
-## Development server
+Visualizador de projetos github por nome de usuário.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#####Requisitos
+1. Angular CLI
+2. Node
 
-## Code scaffolding
+#####Executar projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- No diretório do projeto executo no terminal:
 
-## Build
+`` ng serve`` ou `` npm run start``
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Logo após no navegador, abra o endereço [localhost:4200/](localhost:4200/) .
 
-## Running unit tests
+#####Resumo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Na tela inicial, digite o usuário do github no qual deseja visualizar os repositórios.
+ Na aba 'Repositórios', ficam todos os repositórios não favoritos da conta, para visualizar os repositórios favoritos clique em 'Favoritos'. E por ultimo se precisar pesquisar um repositório por nome clique na aba Pesquisar.
+ 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

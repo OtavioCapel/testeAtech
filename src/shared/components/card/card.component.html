@@ -1,0 +1,17 @@
+<div class="card">
+    <a [href]="data.html_url" target="_blank">
+        <mat-icon>exit_to_app</mat-icon>
+    </a>
+
+    <div class="card-title">
+        <p>{{ data.name }} </p>
+        <mat-icon matTooltip="Projeto privado" *ngIf="data.private">lock</mat-icon>
+    </div>
+
+    <p>N° forks: {{ data.forks }}</p>
+    <p>Criado em: {{ data.created_at | date: 'd/M/yy' }}</p>
+    <p>Linguagem: {{ data.language }}</p>
+
+    <textarea readonly> {{ data.description }}</textarea>
+    
+</div>

@@ -1,0 +1,41 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss/colors.scss';
+
+.profile {
+    width: inherit;
+    border-radius: 5px;
+    border: 1px solid $gray;
+    @include flex-align(flex-start, center, row);
+    padding: 1rem;
+    margin: .5rem;
+    background-color: $card-bg;
+    
+    p:first-child {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .exit {
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    div {
+        word-break: break-all;
+        padding-left: 1rem;
+
+        .email {
+            font-size: 12px;
+        }
+    }
+
+    img {
+        width: 6.5rem;
+        height: 6.5rem;
+        border-radius: 50%;
+    }
+}

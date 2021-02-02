@@ -1,0 +1,71 @@
+@import '../../../scss/mixins.scss';
+@import '../../../scss/colors.scss';
+
+
+:host {
+
+    .wrapper {
+        width: 100vw;
+        height: 100vh;
+        @include flex-align(center, center);
+        @include fadeIn;
+
+        .search {
+            padding: 1rem;
+            border: 1px solid $gray;
+            border-radius: 3px;
+            width: 70%;
+            background-color: $card-bg;
+            @include flex-align(space-between, center);
+
+            img {
+                width: 65%;
+            }
+
+            form {
+                width: 100%;
+                @include flex-align(space-between, center);
+            
+                .input {
+                    width: 80%;
+                    margin: .5rem;
+                }
+        
+                button {
+                    width: 50%;
+                    margin: .5rem;
+                    height: 40px;
+                    border: none;
+                    border-radius: 20px;
+                    font-weight: lighter;
+                    @include flex-align(space-around, center, row);
+                    font-size: 15px;
+                    background-color: green;
+                    color: white;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:disabled {
+                        cursor: not-allowed;
+                        background-color: lightgreen;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include desktop {
+        .wrapper {
+    
+            .search {
+                
+                width: 25%;
+                
+    
+            }
+        }
+    }
+
+    
+}

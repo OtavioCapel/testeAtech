@@ -1,0 +1,11 @@
+<div class="profile" *ngIf="user">
+    <img [src]="user.avatar_url">
+    
+    <div>
+      <p class="username">{{ user.name || user.login}}</p>
+      <p class="email" *ngIf="user.email">{{ user.email }}</p>
+      <a [href]="user.html_url" target="_blanc">Acessar perfil</a>
+
+      <p class="exit" (click)="exitUser()">Trocar usuário</p>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="search">
+      
+    <img src="../../../assets/img/github-logo.webp">
+
+    <form [formGroup]="authForm" (submit)="ngSubmit()">
+      <mat-form-field class="input">
+        <mat-label>Usuário Github</mat-label>
+        <input matInput formControlName="username">
+        <mat-error *ngIf="authForm.get('username').errors">
+          Digite um usuário válido
+        </mat-error>
+      </mat-form-field>
+    
+      <button
+        type="submit" 
+        [disabled]="!authForm.valid">
+        Pesquisar
+      </button>
+    </form>     
+  </div>  
+
+</div>

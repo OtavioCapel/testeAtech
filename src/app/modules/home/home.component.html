@@ -1,0 +1,53 @@
+<app-search-user (data)="getData($event)" *ngIf="!user"></app-search-user>
+
+<ng-container *ngIf="user">
+  <app-profile-card [user]="user" (changeUser)="user = $event"></app-profile-card>
+  
+  <ng-container *ngIf="unStarredRepo.length > 0 || starredRepo.length > 0">
+    <mat-tab-group>
+      <mat-tab label="Repositorios"  *ngIf="unStarredRepo.length > 0">
+        <div class="wrapper">
+          <ng-container *ngFor="let rep of unStarredRepo">
+            <app-card [data]="rep"></app-card>
+          </ng-container>
+        </div>
+      </mat-tab>
+    
+      <mat-tab label="Favoritos" *ngIf="starredRepo.length > 0"> 
+        <div class="wrapper">
+          <ng-container *ngFor="let rep of starredRepo">
+            <app-card [data]="rep"></app-card>
+          </ng-container>
+        </div>    
+      </mat-tab>
+
+      <mat-tab label="Pesquisar"> 
+        <div class="wrapper">
+
+          <form [formGroup]="searchForm">
+            <mat-form-field class="input">
+              <mat-label>Pesquisar repositório</mat-label>
+              <input matInput formControlName="repoName">
+              <mat-error *ngIf="searchForm.get('repoName').errors">
+                Pesquisar repositório
+              </mat-error>
+            </mat-form-field>
+          </form>     
+
+          <ng-container *ngFor="let rep of searchRepo">
+            <app-card [data]="rep"></app-card>
+          </ng-container>
+        </div>    
+      </mat-tab>
+  
+    </mat-tab-group>
+  </ng-container>
+
+  <ng-container *ngIf="unStarredRepo.length == 0 && starredRepo.length == 0">
+    <div class="center">
+      <h2>{{ user.name || user.login }} não tem repositórios no momento.</h2>
+    </div>
+  </ng-container>
+
+</ng-container>
+

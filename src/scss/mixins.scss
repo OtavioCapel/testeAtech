@@ -1,0 +1,35 @@
+@mixin flex-align($justify, $align, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin phone {
+    @media (max-width: 599px) { 
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 600px) { 
+        @content; 
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content; 
+    }
+}
+
+@mixin fadeIn {
+    opacity: 1;
+    animation: fade 1s linear;
+
+    @keyframes fade {
+      0% { opacity: 0 }
+      100% { opacity: 1 }
+    }
+}
+
