@@ -13,7 +13,7 @@ export class SearchUserComponent implements OnInit {
   @Output() data = new EventEmitter();
 
   authForm: FormGroup = new FormGroup({
-    username: new FormControl('filipedeschamps', [Validators.required, usernameValidator]),
+    username: new FormControl('', [Validators.required, usernameValidator]),
   })
 
   user;
